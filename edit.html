@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 일기장 수정</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">MySongDiaryApp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">Add today's song</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form id="form1" action="../index.html" name="form1" onsubmit="return ValidateForm()">
+        <div class="mb-3" id="my-mb-3-2">
+            <label for="exampleFormControlInput1" class="form-label">작성 날짜</label>
+            <input type="date" class="form-control" name="date">
+        </div>
+        <div class="mb-3" id="my-mb-3-2">
+            <label for="exampleFormControlInput1" class="form-label">제목</label>
+            <input type="text" class="form-control" placeholder="Ex :Close to you" name="song title">
+
+        </div>
+        <div class="mb-3" id="my-mb-3-1">
+            <label for="exampleFormControlInput1" class="form-label">가수</label>
+            <input type="text" class="form-control" name="singer" placeholder="Ex : 안서영">
+        </div>
+        <div class="mb-3" id="my-mb-3-2">
+            <label for="exampleFormControlInput1" class="form-label">기분</label>
+            <input type="text" class="form-control" name="mood" placeholder="Ex : 몽글몽글">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">일기 내용</label>
+            <input type="text" class="form-control" name="diary" placeholder="Ex : 가을바람이 살랑살랑 불어서 기분이 좋았던 날">
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Submit" id="button1">
+
+
+        <input class="btn btn-primary" type="reset" value="Reset" id="button2">
+
+    </form>
+
+
+    <script>
+        function ValidateForm() {
+
+            if (form1.date.value == "") {
+                form1
+                    .date
+                    .focus();
+                alert("날짜를 입력해 주십시오.");
+                return false;
+            } else if (form1.title.value == "") {
+                form1
+                    .title
+                    .focus();
+                alert("제목을 입력해 주십시오.");
+                return false;
+            } else if (form1.singer.value == "") {
+                form1
+                    .singer
+                    .focus();
+                alert("가수를 입력해 주십시오.");
+                return false;
+            } else if (form1.mood.value == "") {
+                form1
+                    .mood
+                    .focus();
+                alert("기분을 입력해 주십시오.");
+                return false;
+            } else if (form1.diary.value == "") {
+                form1
+                    .diary
+                    .focus();
+                alert("일기 내용 입력해 주십시오.");
+                return false;
+            } else {
+                if (confirm("내용을 수정하시겠습니까?")) {
+                    alert("수정되었습니다.");
+                } else {
+                    alert("취소되었습니다.");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

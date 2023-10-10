@@ -3,12 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= s, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 노래 일기</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./custom.css"> Your custom CSS file -->
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">MySongDiaryApp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">Add today's song</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container mt-5">
+        <h1>My song diary</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>날짜</th>
+                    <th>제목</th>
+                    <th>가수</th>
+                    <th>기분</th>
+                    <th>일기 내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="/view.html?data=1" class="text-primary">민들레</a></td>
+                    <td>2023.09.20</td>
+                    <td>우효</td>
+                    <td>그리움</td>
+                    <td>들꽃이 넘 예뻤던 날</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="/view.html?data=2" class="text-primary">첫사랑</a></td>
+                    <td>2023.09.24</td>
+                    <td>백아</td>
+                    <td>설렘</td>
+                    <td>몽글몽글함이 가득했던 날</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="/view.html?data=3" class="text-primary">yours</a></td>
+                    <td>2023.09.27</td>
+                    <td>데이먼스 이어</td>
+                    <td>담담히 전하는 마음</td>
+                    <td>가을을 여유롭게 즐기며 듣기 좋았다.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="/view.html?data=4" class="text-primary">L'Amour, Les Baguettes, Paris</a></td>
+                    <td>2023.10.10</td>
+                    <td>스텔라장</td>
+                    <td>여유로움</td>
+                    <td>살랑이는 바람이 기분 좋았던 날</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
